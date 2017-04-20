@@ -3,9 +3,56 @@
 	color: #fff;
 	&-inner {
 		background: $blue;
-		padding: 15px;
+		padding: 25px 15px 15px 15px;
 	}
 	&__copyright {
 		font-size: 11px;
+		margin: 20px 0 10px 0;
+	}
+	&__address {
+		font-size: 12px;
+		&-text {
+			margin: 0 0 0 10px;
+			display: inline-block;
+		}
+		&-link {
+			color: #fff;
+			text-decoration: underline;
+			display: inline-block;
+			margin-left: 30px;
+			margin-bottom: 10px;
+			&:hover,
+			&:focus {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+	&__info {
+		&-text {
+			display: inline-block;
+			margin: 0 0 0 11px;
+			vertical-align: top;
+		}
+		&-link {
+			color: #fff;
+			text-decoration: none;
+			margin: 0 20px 0 10px;
+			display: inline-block;
+			&:hover,
+			&:focus {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__develop {
+		&-text {
+			display: inline-block;
+		    text-align: center;
+		    margin: 20px 0 0 10px;
+		    vertical-align: top;
+		}
 	}
 }
