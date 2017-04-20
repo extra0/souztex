@@ -1,24 +1,24 @@
 header.header
 	.container
 		.row
-			.col-sm-3
+			.col-sm-3.col-xs-5.col-xxs-12.xs-text-center
 				// Логотип
 				a.header__logo(href="/")
 					img(src="img/logo.png" alt="Site Logo")
 				// / логотип
-			.col-sm-8.col-sm-offset-1
+			.col-sm-9.col-lg-8.col-lg-offset-1.col-xs-7.col-xxs-12
 				// верхний уровень
 				.row
 					.col-sm-12
 						.header__section-block
-							.header__block
+							.header__block.xs-text-right.xxs-text-center
 								a.header__block-text(href="tel:+74952405919") 
 									img(src="/img/h-phone.png", alt="phone")
 									span.header__block-text-item +7 (495) 240-59-19
-								a.header__block-text(href="mailto:info@sztek.ru") 
+								a.header__block-text.hidden-sm(href="mailto:info@sztek.ru") 
 									img(src="/img/h-mail.png", alt="mail")
 									span.header__block-text-item info@sztek.ru
-							.header__block
+							.header__block.xs-text-right.xxs-text-center
 								a.header__languages-link(href="#!") 
 									img(src="/img/rus.png", alt="rus")
 									span.header__languages-link-text rus
@@ -34,7 +34,8 @@ header.header
 				.row
 					.col-sm-12
 						.header__main-menu-block
-							ul.header__main-menu
+							button.header__main-menu-btn.visible-xs-inline-block(type="button" data-toggle="main-menu") Меню
+							ul.header__main-menu#main-menu
 								each item in menu
 									li.header__main-menu-item
 										a.header__main-menu-item-link(href="#!") #{item}
@@ -43,8 +44,8 @@ header.header
 		.row
 			.col-sm-12
 				.header__catalog-menu
-					button.header__catalog-menu-btn.visible-xs(type="button") Каталог
-					ul.header__catalog-menu-list
+					button.header__catalog-menu-btn.visible-xs-inline-block(type="button" data-toggle="catalog-menu") Каталог
+					ul.header__catalog-menu-list#catalog-menu
 						each item in catalogMenu
 							li.header__catalog-menu-list-item
 								a.header__catalog-menu-list-item-link(href="#!") #{item}

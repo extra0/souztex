@@ -87,21 +87,20 @@
 	&__search {
 		&-input {
 			width: 230px;
-			height: 29px;
 			border: 1px solid #d1d1d1;
 			background: #fff;
 			font-style: italic;
 			margin: -3px 0 3px 0;
 			color: #7d7d7d;
 			@include transition(all 0.2s ease-in-out);
-			padding: 3px 27px 3px 10px;
+			padding: 4px 27px 4px 10px;
 			&:focus {
 				border-color: $green;
 			}
 		}
 		&-submit {
 			border: none;
-			@include position(absolute, 0 0 null null);
+			@include position(absolute, -3px 0 null null);
 			background: url(../img/search.png) center center no-repeat;
 			width: 29px;
 			height: 29px;
