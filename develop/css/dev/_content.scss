@@ -1,0 +1,125 @@
+.main-slider {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	&__block {
+		margin: -15px -15px 15px -15px;
+		.bx-viewport {
+			padding-bottom: 0;
+		}
+	}
+	&__item {
+		&-img {
+			width: 100%;
+		}
+	}
+}
+.category {
+	&__section {
+		@include display(flex);
+		@include justify-content(center);
+		@include align-items(center);
+		margin-top: 70px;
+		&-block {
+			background: #fff;
+			border: 2px solid #e4e4e4;
+			padding: 20px;
+			margin: 20px;
+			width: 264px;
+			height: 126px;
+			position: relative;
+			@include display(flex);
+			@include flex-wrap(wrap);
+			@include align-items(center);
+			@include justify-content(center);
+			a {
+				color: $main-color;
+				font-weight: 500;
+				@include transition(all 0.2s ease-in-out);
+				&:hover,
+				&:focus {
+					color: $green;
+					text-decoration: none;
+				}
+			}
+			&-title {
+				margin: 0;
+				position: relative;
+				top: 15px;
+			}
+			&-img {
+				display: block;
+				margin: 0 auto 20px auto;
+				&-wrap {
+					background: #fff;
+					padding: 0 20px;
+					height: 86px;
+					z-index: 10;
+					@include position(absolute, -33px 0 null 0);
+					margin: 0 20px;
+					@include display(flex);
+					@include align-items(center);
+				}
+			}
+		}
+	}
+}
+.advantages {
+	margin: 70px 0 40px 0;
+	@include display(flex);
+	@include justify-content(space-between);
+	&__block {
+		width: 18%;
+		height: 129px;
+		padding: 20px;
+		background: #fff;
+		border: 2px solid #e4e4e4;
+		text-align: center;
+		position: relative;
+		margin-bottom: 20px;
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(center);
+		&-title {
+			margin: 0;
+			padding-top: 15px;
+		}
+		&-img {
+			&-wrap {
+				background: #fff;
+				z-index: 10;
+				height: 59px;
+				@include display(flex);
+				@include align-items(center);
+				@include justify-content(center);
+				@include position(absolute, -30px 50px null 50px);
+				margin: 0 auto;
+			}
+		}
+	}
+}
+.bottom-menu {
+	text-align: center;
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 15px 0;
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		padding: 5px 25px;
+		&:not(:last-child) {
+			border-right: 1px solid #ddd;
+		}
+		&-link {
+			color: $main-color;
+			@include transition(all 0.2s ease-in-out);
+			&:hover,
+			&:focus,
+			&.current {
+				text-decoration: none;
+				color: $green;
+				
+			}
+		}
+	}
+}

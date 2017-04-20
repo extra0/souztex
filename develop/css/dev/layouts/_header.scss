@@ -1,5 +1,5 @@
 .header {
-	padding: 23px 0;
+	padding: 23px 0 0 0;
 	&__main-menu {
 		list-style-type: none;
 		padding: 0;
@@ -91,6 +91,7 @@
 			border: 1px solid #d1d1d1;
 			background: #fff;
 			font-style: italic;
+			margin: -3px 0 3px 0;
 			color: #7d7d7d;
 			@include transition(all 0.2s ease-in-out);
 			padding: 3px 27px 3px 10px;
@@ -104,6 +105,46 @@
 			background: url(../img/search.png) center center no-repeat;
 			width: 29px;
 			height: 29px;
+		}
+	}
+	&__catalog-menu {
+		margin-top: 24px;
+		&-list {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			@include display(flex);
+			@include justify-content(space-between);
+			&-item {
+				display: block;
+				width: 100%;
+				&:not(:last-child) {
+					border-right: 1px solid #11133e;
+				}
+				&:not(:first-child) {
+					border-left: 1px solid #363878;
+				}
+				&-link {
+					display: block;
+					text-transform: uppercase;
+					color: #fff;
+					height: 100%;
+					@include display(flex);
+					@include align-items(center);
+					@include justify-content(center);
+					padding: 22px 25px;
+					background: #26285e;
+					@include transition(all 0.2s ease-in-out);
+					&:hover,
+					&:focus,
+					&.current {
+						color: $blue;
+						background: #fff;
+						text-decoration: none;
+					}
+				}
+			}
 		}
 	}
 }

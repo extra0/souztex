@@ -4,3 +4,54 @@ block append head
 	meta(name="keywords" content="")
 	title Главная страница
 block content
+	// слайдер
+	include includes/modules/_main-slider
+	// блок категорий
+	.category__section
+		.category__section-block
+			a(href="#!")
+				.category__section-block-img-wrap
+					img.category__section-block-img(src="/img/category-1.png", alt="category-img")
+				p.category__section-block-title(href="#!") Технологии производства
+		.category__section-block
+			a(href="#!")
+				.category__section-block-img-wrap
+					img.category__section-block-img(src="/img/category-2.png", alt="category-img")
+				p.category__section-block-title(href="#!") Продукция
+		.category__section-block
+			a(href="#!")
+				.category__section-block-img-wrap
+					img.category__section-block-img(src="/img/category-3.png", alt="category-img")
+				p.category__section-block-title(href="#!") Информация для покупателей
+	// / блок категорий
+	// / слайдер
+	.description-block
+		h1.title.text-center о группе компаний союзтекстиль-ст
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam reprehenderit illum reiciendis tempore facilis, magnam dolorem fugiat dolore praesentium officia maiores nemo vero nulla porro ex inventore quis itaque officiis esse, totam architecto quaerat atque autem aperiam. Expedita eos alias magnam beatae mollitia cum, aperiam praesentium ipsam, fugiat corporis in nobis delectus nesciunt magni ut nisi consectetur quibusdam, minus sunt. Veniam temporibus aspernatur reprehenderit fugiat laudantium praesentium sed ab culpa cum, non quos beatae fugit, corporis excepturi quod repellendus ducimus, aliquam tempore iure sequi ullam error corrupti rerum explicabo porro? Qui similique, nostrum vel nihil reprehenderit accusamus placeat accusantium distinctio!
+		p Tempore delectus tempora aliquam amet debitis non repellendus vel dolor quidem minus perferendis corrupti, culpa praesentium tenetur eius accusamus distinctio nemo repellat totam ut commodi quae ad omnis! Eveniet, ab corporis animi necessitatibus maiores sint sunt modi voluptates qui deleniti tenetur ut, aliquam nihil fugiat. Et similique, doloremque neque modi, laborum magni harum ratione blanditiis error sapiente saepe maiores culpa dolorem? Aspernatur similique voluptatum, non reiciendis ex, nihil id tempore earum totam iste labore accusamus laborum recusandae perspiciatis fugit assumenda! Labore magni nihil nostrum officiis deserunt, veniam unde voluptatum eos voluptate, corrupti accusantium alias esse sequi facere ea, neque. Pariatur?
+	// преимущества
+	.advantages
+		.advantages__block
+			.advantages__block-img-wrap
+				img.advantages__block-img(src="/img/advantages-1.png", alt="advantages")
+			p.advantages__block-title Десятилетний опыт работы на рынке 
+		.advantages__block
+			.advantages__block-img-wrap
+				img.advantages__block-img(src="/img/advantages-2.png", alt="advantages")
+			p.advantages__block-title Высокий уровень качества
+		.advantages__block
+			.advantages__block-img-wrap
+				img.advantages__block-img(src="/img/advantages-3.png", alt="advantages")
+			p.advantages__block-title Для въезда на территорию нужен пропуск
+		.advantages__block
+			.advantages__block-img-wrap
+				img.advantages__block-img(src="/img/advantages-4.png", alt="advantages")
+			p.advantages__block-title Отсрочка платежа для постоянных клиентов
+		.advantages__block
+			.advantages__block-img-wrap
+				img.advantages__block-img(src="/img/advantages-5.png", alt="advantages")
+			p.advantages__block-title Гибкая система скидок
+	// / преимущества
+	// нижнее меню
+	include includes/modules/_bottom-menu
+	// / нижнее меню

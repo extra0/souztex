@@ -1,5 +1,12 @@
 $(function(){
 
-	// вызов фенсибокса
-	$('[fancybox]').fancybox();
+	// главный слайдер
+	$('.js-main-slider').bxSlider({
+		mode: 'fade',
+		auto: true,
+		pager: false,
+		controls: false
+	});
+
+
 });

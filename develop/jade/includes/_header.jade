@@ -39,3 +39,13 @@ header.header
 									li.header__main-menu-item
 										a.header__main-menu-item-link(href="#!") #{item}
 				// / меню
+		// меню каталога
+		.row
+			.col-sm-12
+				.header__catalog-menu
+					button.header__catalog-menu-btn.visible-xs(type="button") Каталог
+					ul.header__catalog-menu-list
+						each item in catalogMenu
+							li.header__catalog-menu-list-item
+								a.header__catalog-menu-list-item-link(href="#!") #{item}
+		// / меню каталога

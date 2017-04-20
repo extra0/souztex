@@ -1,0 +1,11 @@
+.footer {
+	padding-bottom: 50px;
+	color: #fff;
+	&-inner {
+		background: $blue;
+		padding: 15px;
+	}
+	&__copyright {
+		font-size: 11px;
+	}
+}
