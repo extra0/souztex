@@ -1,1 +1,6 @@
-@include font-face(" ", "../fonts/", bold, italic, $file-formats: ttf eot svg);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-Bold", bold, normal, $file-formats: ttf);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-BoldItalic", bold, italic, $file-formats: ttf);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-Light", 300, normal, $file-formats: ttf);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-LightItalic", 300, italic, $file-formats: ttf);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-Roman", normal, normal, $file-formats: ttf);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-UltraLight", 100, normal, $file-formats: ttf);

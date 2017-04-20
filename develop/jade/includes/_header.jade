@@ -1,4 +1,41 @@
 header.header
 	.container
-		a.header__logo(href="/")
-			img(src="img/logo.png" alt="Site Logo")
+		.row
+			.col-sm-3
+				// Логотип
+				a.header__logo(href="/")
+					img(src="img/logo.png" alt="Site Logo")
+				// / логотип
+			.col-sm-8.col-sm-offset-1
+				// верхний уровень
+				.row
+					.col-sm-12
+						.header__section-block
+							.header__block
+								a.header__block-text(href="tel:+74952405919") 
+									img(src="/img/h-phone.png", alt="phone")
+									span.header__block-text-item +7 (495) 240-59-19
+								a.header__block-text(href="mailto:info@sztek.ru") 
+									img(src="/img/h-mail.png", alt="mail")
+									span.header__block-text-item info@sztek.ru
+							.header__block
+								a.header__languages-link(href="#!") 
+									img(src="/img/rus.png", alt="rus")
+									span.header__languages-link-text rus
+								a.header__languages-link(href="#!") 
+									img(src="/img/eng.png", alt="eng")
+									span.header__languages-link-text eng
+							.header__block
+								form(action="#!")
+									input.header__search-input(type="text" name="search" placeholder="поиск по сайту" required)
+									button.header__search-submit(type="submit")
+				// / верхний уровень
+				// меню
+				.row
+					.col-sm-12
+						.header__main-menu-block
+							ul.header__main-menu
+								each item in menu
+									li.header__main-menu-item
+										a.header__main-menu-item-link(href="#!") #{item}
+				// / меню

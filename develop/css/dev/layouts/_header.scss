@@ -1,0 +1,109 @@
+.header {
+	padding: 23px 0;
+	&__main-menu {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		@include display(flex);
+		@include justify-content(space-between);
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			padding: 3px 35px;
+			&:not(:last-child) {
+				border-right: 1px solid #dddddd;
+			}
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+			&-link {
+				text-transform: uppercase;
+				color: #3c3c3c;
+				text-decoration: none;
+				@include transition(all 0.2s ease-in-out);
+				&.current,
+				&:hover,
+				&:focus {
+					color: $green;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&__section-block {
+		margin: 14px 0 22px 0;
+		@include display(flex);
+		@include justify-content(space-between);
+	}
+	&__block {
+		position: relative;
+		&-text {
+			text-decoration: none;
+			color: $main-color;
+			@include transition(all 0.2s ease-in-out);
+			&:focus,
+			&:hover {
+				color: $green;
+				text-decoration: none;
+			}
+			&-item {
+				display: inline-block;
+				margin: 0px 0 0 12px;
+				position: relative;
+				top: 2px;
+			}
+			&:not(:last-child) {
+				margin-right: 42px;
+			}
+		}
+	}
+	&__languages {
+		&-link {
+			text-decoration: none;
+			color: $main-color;
+			padding-bottom: 6px;
+			@include transition(all 0.2s ease-in-out);
+			&:focus,
+			&:hover {
+				color: $green;
+				text-decoration: none;
+			}
+			&:not(:last-child) {
+				border-right: 2px solid #ababab;
+				margin-right: 10px;
+				padding-right: 10px;
+			}
+			&-text {
+				display: inline-block;
+				margin: 0px 0 0 12px;
+				position: relative;
+				top: 2px;
+			}
+		}
+	}
+	&__search {
+		&-input {
+			width: 230px;
+			height: 29px;
+			border: 1px solid #d1d1d1;
+			background: #fff;
+			font-style: italic;
+			color: #7d7d7d;
+			@include transition(all 0.2s ease-in-out);
+			padding: 3px 27px 3px 10px;
+			&:focus {
+				border-color: $green;
+			}
+		}
+		&-submit {
+			border: none;
+			@include position(absolute, 0 0 null null);
+			background: url(../img/search.png) center center no-repeat;
+			width: 29px;
+			height: 29px;
+		}
+	}
+}
