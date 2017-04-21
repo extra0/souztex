@@ -1,0 +1,64 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	- title = "Типовая страница"
+	title #{title}
+block content
+	// хлебные крошки
+	include includes/modules/_breadcrumbs
+	// / хлебные крошки
+	.row
+		// sidebar
+		.col-sm-4.col-md-3
+			include includes/modules/_left-sidebar
+		// / sidebar
+		// контент страницы
+		.col-sm-8.col-md-9
+			h1.title.m-t-0 #{title}
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ut inventore, voluptatibus iure in sit architecto tenetur! Nobis nam, ullam recusandae totam impedit deserunt! Dolore, ratione modi reiciendis doloribus rerum.
+			.table-responsive
+				table
+					tr
+						td Марка ткани, КНТС-Пкордной нити, дтекс
+						td 123 КНТС-П
+						td 123 КНТС-П
+					- for (i=1;i<=5;i++) {
+						tr
+							td Структура кордной нити, дтекс
+							td 0000002
+							td 0000003
+					- }
+			h1 заголовок 1
+			h2 заголовок 2
+			h3 заголовок 3
+			h4 заголовок 4
+			ul
+				li 0001
+				li 0002
+				li 0003
+				li 0004
+				li 0005
+			hr
+			ol
+				li 0001
+				li 0002
+				li 0003
+				li 0004
+				li 0005
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quam distinctio reprehenderit asperiores, impedit, incidunt necessitatibus eos corporis dolorum cupiditate doloribus amet repudiandae repellendus. At tempora atque accusamus itaque saepe, quod excepturi impedit aperiam, totam amet assumenda soluta quas labore quisquam obcaecati vero cum libero dolor temporibus? Ea quibusdam sed rerum, deleniti magni velit beatae in porro. Earum doloribus, omnis consequatur esse porro provident minus voluptates dicta vero inventore unde nulla vitae corporis, laudantium eligendi amet magni tenetur ex minima alias explicabo quas impedit quasi. Molestiae hic recusandae minus aut reprehenderit, assumenda tempora provident a temporibus, incidunt soluta vero voluptates!
+			.row
+				.col-sm-4.col-xs-4
+					img(src="img/content/slide1.jpg", alt="")
+				.col-sm-4.col-xs-4
+					img(src="img/content/slide1.jpg", alt="")
+				.col-sm-4.col-xs-4
+					img(src="img/content/slide1.jpg", alt="")
+			br
+			br
+			br
+			br
+		// / контент страницы
+	// нижнее меню
+	include includes/modules/_bottom-menu
+	// / нижнее меню
