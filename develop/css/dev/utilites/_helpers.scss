@@ -43,8 +43,9 @@
 table:not([class]) {
 	width: 100%;
 	font-weight: 400;
+	margin: 15px 0;
 	td, th {
-		padding: 25px 20px;
+		padding: 15px;
 		&:not(:first-child) {
 			text-align: center;
 		}

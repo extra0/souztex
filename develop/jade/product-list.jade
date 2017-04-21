@@ -1,0 +1,51 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	- title = "Страница списка продукции"
+	title #{title}
+block content
+	// хлебные крошки
+	include includes/modules/_breadcrumbs
+	// / хлебные крошки
+	.row
+		// sidebar
+		.col-sm-4.col-md-3
+			include includes/modules/_left-sidebar
+		// / sidebar
+		// контент страницы
+		.col-sm-8.col-md-9
+			h1.title.m-t-0 #{title}
+			.catalog__block
+				img.catalog__block-img(src="img/content/product.jpg", alt="")
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur sunt modi, beatae voluptatibus explicabo soluta suscipit nemo, cupiditate aliquid, ducimus autem perferendis, provident fugit. Error quisquam, odit maxime officiis impedit, animi dolor.
+				.table-responsive
+					table
+						tr
+							td Марка ткани, КНТС-Пкордной нити, дтекс
+							td 123 КНТС-П
+							td 123 КНТС-П
+						- for (i=1;i<=2;i++) {
+							tr
+								td Структура кордной нити, дтекс
+								td 0000002
+								td 0000003
+						- }
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur sunt modi, beatae voluptatibus explicabo soluta suscipit nemo, cupiditate aliquid, ducimus autem perferendis, provident fugit. Error quisquam, odit maxime officiis impedit, animi dolor. Sint suscipit, ab qui harum eum vitae accusantium at neque! Blanditiis at, doloremque! Nesciunt et numquam error quae, fuga ratione illo eligendi, voluptas ea! Harum aliquam deleniti, veniam sed eum, officia, quod consequuntur laudantium officiis neque totam laborum amet dicta expedita voluptates cum laboriosam repudiandae, quam dolor similique alias ea sunt ipsa. Numquam repellendus, voluptatum blanditiis labore assumenda modi alias non, praesentium veritatis eveniet deleniti voluptate atque ad.
+			.catalog__list
+				.row
+					- for (i=1;i<=3;i++) {
+						.catalog__list-item.col-sm-4
+							a(href="#!")
+								p.catalog__list-item-title капроновые кордные ткани
+								img.catalog__list-item-img(src="img/content/product.jpg", alt="")
+							p.catalog__list-item-text 935 Дтекс 2х1 - 1870 Дтекс 4506 8325 Ratatef 350 Kord #234
+					- }
+			br
+			br
+			br
+			br
+		// / контент страницы
+	// нижнее меню
+	include includes/modules/_bottom-menu
+	// / нижнее меню
