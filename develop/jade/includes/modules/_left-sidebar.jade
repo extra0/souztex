@@ -1,2 +1,45 @@
-footer.footer
-	.container
+.sidebar
+	button.sidebar__btn.visible-xs-inline-block(type="button" data-toggle="sidebar") 
+		| Меню каталога
+	.sidebar__section#sidebar
+		.sidebar__panel
+			.sidebar__panel-heading 
+				a(href="#!") ткани технические
+			.sidebar__panel-body
+				ul.sidebar__list
+					li.sidebar__list-item
+						a.sidebar__list-item-link(href="#!") Пропитанные ткани
+					li.sidebar__list-item
+						a.sidebar__list-item-link(href="#!") Суровые ткани
+		.sidebar__panel
+			.sidebar__panel-heading 
+				a(href="#!") ленты технические
+			.sidebar__panel-body
+				ul.sidebar__list
+					li.sidebar__list-item
+						a.sidebar__list-item-link(href="#!") Швейные нити
+					li.sidebar__list-item
+						a.sidebar__list-item-link(href="#!") Нити технические
+						span.sidebar__list-item-trigger(data-toggle="list-1") 
+						ul.sidebar__list#list-1
+							li.sidebar__list-item
+								a.sidebar__list-item-link.current(href="#!") Вытянутые нити
+							li.sidebar__list-item
+								a.sidebar__list-item-link(href="#!") Крученые нити
+								span.sidebar__list-item-trigger(data-toggle="list-2") 
+								ul.sidebar__list#list-2
+									li.sidebar__list-item
+										a.sidebar__list-item-link(href="#!") Швейные нити
+									li.sidebar__list-item
+										a.sidebar__list-item-link(href="#!") Нити технические
+		- for (i=1;i<=6;i++) {
+			.sidebar__panel
+				.sidebar__panel-heading 
+					a(href="#!") ткани технические
+				.sidebar__panel-body
+					ul.sidebar__list
+						li.sidebar__list-item
+							a.sidebar__list-item-link(href="#!") Пропитанные ткани
+						li.sidebar__list-item
+							a.sidebar__list-item-link(href="#!") Суровые ткани
+		- }

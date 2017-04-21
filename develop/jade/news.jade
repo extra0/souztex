@@ -1,0 +1,38 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	- title = "Новости"
+	title #{title}
+block content
+	// хлебные крошки
+	include includes/modules/_breadcrumbs
+	// / хлебные крошки
+	.row
+		// sidebar
+		.col-sm-4.col-md-3
+			include includes/modules/_left-sidebar
+		// / sidebar
+		// контент страницы
+		.col-sm-8.col-md-9
+			h1.title.m-t-0 #{title}
+			.news
+				- for (i=1;i<=5;i++) {
+					.news__block
+						.row
+							.col-md-3.col-sm-4.col-xs-5.col-xxs-12
+								a(href="#!")
+									img.news__preview-img(src="img/content/news.jpg", alt="News")
+							.col-md-9.col-sm-8.col-xs-7.col-xxs-12
+								span.news__block-date 
+									i.fa.fa-calendar 
+									|  7 апреля  2017 г.
+								span.news__block-title Lorem ipsum dolor sit amet, rat consectetur adipiscing
+								span.news__block-previewText Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis cursus elit. Nulla a orci in elit vulputate venenatis. Morbi ornare rhoncus enim, in porttitor libero venenatis et. Cras rutrum cursus lacus, sit amet aliquam ante malesuada et. 
+								a.news__block-link(href="#!") подробнее
+				- }
+				include includes/modules/_pagination
+		// / контент страницы
+	// нижнее меню
+	include includes/modules/_bottom-menu
+	// / нижнее меню

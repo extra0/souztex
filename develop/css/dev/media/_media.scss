@@ -39,8 +39,12 @@
 			    z-index: 100;
 			    padding-left: 27px;
 			    &:before {
-			    	content: "\e236";
-			    	font-family: 'Glyphicons Halflings';
+			    	content: "\f0c9";
+			    	font: normal normal normal 23px/1 FontAwesome;
+			    	font-size: 21px;
+			    	text-rendering: auto;
+			    	-webkit-font-smoothing: antialiased;
+			    	-moz-osx-font-smoothing: grayscale;
 			    	width: 20px;
 			    	height: 20px;
 			    	position: absolute;
@@ -50,7 +54,7 @@
 			    }
 			    &.active {
 			    	&:before {
-			    		content: "\e014";
+			    		content: "\f00d";
 			    	}
 			    }
 			}
@@ -69,8 +73,12 @@
 					padding-left: 27px;
 					position: relative;
 					&:before {
-						content: "\e010";
-						font-family: 'Glyphicons Halflings';
+						content: "\f009";
+						font: normal normal normal 21px/1 FontAwesome;
+						font-size: 21px;
+						text-rendering: auto;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
 						width: 20px;
 						height: 20px;
 						position: absolute;
@@ -79,7 +87,7 @@
 					}
 					&.active {
 						&:before {
-							content: "\e014";
+							content: "\f00d";
 						}
 					}
 				}
@@ -150,7 +158,17 @@
 			margin: 0 10px 50px 10px;
 		}
 	}
-
+	.sidebar {
+		&__section {
+			// display: none;
+			max-height: 0px;
+			overflow: hidden;
+			@include transition(all 0.2s ease-in-out);
+			&.active {
+				max-height: 2000px;
+			}
+		}
+	}
 	.footer {
 		padding-bottom: 0;
 		&__develop {

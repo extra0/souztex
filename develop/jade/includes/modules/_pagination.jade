@@ -1,0 +1,16 @@
+.pagination__block
+	ul.pagination__list
+		li.pagination__list-item
+			a.pagination__list-item-link.first(href="#!")
+				i.fa.fa-chevron-left
+		- for (i=1;i<=10;i++) {
+			if (i!=3)
+				li.pagination__list-item
+					a.pagination__list-item-link(href="#!") #{i}
+			else 
+				li.pagination__list-item
+					span.pagination__list-item-link.current #{i}
+		- }
+		li.pagination__list-item
+			a.pagination__list-item-link.last(href="#!")
+				i.fa.fa-chevron-right
