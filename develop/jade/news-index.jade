@@ -1,0 +1,30 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	- title = "Страница новости"
+	title #{title}
+block content
+	// хлебные крошки
+	include includes/modules/_breadcrumbs
+	// / хлебные крошки
+	.row
+		// sidebar
+		.col-sm-4.col-md-3
+			include includes/modules/_left-sidebar
+		// / sidebar
+		// контент страницы
+		.col-sm-8.col-md-9
+			.news__detail
+				h1.title.m-t-0 #{title}
+				img.news__detail-img(src="img/content/slide1.jpg", alt="")
+				span.news__detail-date
+					i.fa.fa-calendar
+					|  7 апреля 2017г.
+				.news__detail-text
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia adipisci doloremque voluptatibus voluptate mollitia, enim ad. Nostrum quaerat laudantium tempora nisi omnis nesciunt expedita, unde. Possimus cupiditate necessitatibus architecto quae ullam est ea mollitia quaerat tenetur molestias! Qui laudantium ipsam commodi veritatis quidem! Cum eaque fugit inventore maxime voluptatum modi fuga accusantium omnis deserunt, iusto. Consequuntur inventore iure quis pariatur rem libero sequi, modi quam, officiis vitae vero ducimus nihil repellendus culpa aspernatur doloremque, magnam commodi aut voluptatem. Corporis nisi quam, inventore iusto fugiat aperiam. Natus quos eaque nostrum ipsum labore eos earum. Sit quis temporibus nam! Voluptas temporibus maiores cupiditate nesciunt aspernatur eaque incidunt ut aut, veritatis voluptatum fuga suscipit obcaecati sed, magnam aliquam eveniet illo dicta ducimus fugit sint at, esse eligendi. Provident officiis quas amet saepe dolorum sequi sit nobis quibusdam earum. Culpa accusamus molestias quisquam assumenda dolore beatae aperiam, veniam explicabo. Vitae accusamus similique ea at nisi nemo debitis est enim totam voluptate possimus tempora autem ab temporibus, vero magnam dignissimos ut aliquid eligendi neque dolorem sequi! Vitae, quaerat vero assumenda repellendus repudiandae odit cum quae amet quam magnam rerum perferendis, nesciunt? Enim excepturi voluptatibus perspiciatis consectetur amet corrupti odit debitis vel tempora tempore, reiciendis id.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia adipisci doloremque voluptatibus voluptate mollitia, enim ad. Nostrum quaerat laudantium tempora nisi omnis nesciunt expedita, unde. Possimus cupiditate necessitatibus architecto quae ullam est ea mollitia quaerat tenetur molestias! Qui laudantium ipsam commodi veritatis quidem! Cum eaque fugit inventore maxime voluptatum modi fuga accusantium omnis deserunt, iusto. Consequuntur inventore iure quis pariatur rem libero sequi, modi quam, officiis vitae vero ducimus nihil repellendus culpa aspernatur doloremque, magnam commodi aut voluptatem. Corporis nisi quam, inventore iusto fugiat aperiam. Natus quos eaque nostrum ipsum labore eos earum. Sit quis temporibus nam! Voluptas temporibus maiores cupiditate nesciunt aspernatur eaque incidunt ut aut, veritatis voluptatum fuga suscipit obcaecati sed, magnam aliquam eveniet illo dicta ducimus fugit sint at, esse eligendi. Provident officiis quas amet saepe dolorum sequi sit nobis quibusdam earum. Culpa accusamus molestias quisquam assumenda dolore beatae aperiam, veniam explicabo. Vitae accusamus similique ea at nisi nemo debitis est enim totam voluptate possimus tempora autem ab temporibus, vero magnam dignissimos ut aliquid eligendi neque dolorem sequi! Vitae, quaerat vero assumenda repellendus repudiandae odit cum quae amet quam magnam rerum perferendis, nesciunt? Enim excepturi voluptatibus perspiciatis consectetur amet corrupti odit debitis vel tempora tempore, reiciendis id.
+		// / контент страницы
+	// нижнее меню
+	include includes/modules/_bottom-menu
+	// / нижнее меню

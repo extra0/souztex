@@ -189,6 +189,18 @@
 			}
 		}
 	}
+	&__detail {
+		&-img {
+			float: left;
+			max-width: 330px;
+			margin: 0 10px 10px 0;
+		}
+		&-date {
+			font-weight: 400;
+			display: block;
+			margin-bottom: 5px;
+		}
+	}
 }
 .pagination {
 	&__block {
